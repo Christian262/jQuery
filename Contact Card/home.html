@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Add User</title>
+        <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+        <script>
+            $(document).ready(function(){
+                $(".submit").click(function() {
+                    var first = $("#first").val();
+                    var last = $("#last").val();
+                    var email = $("#email").val();
+                    var description = $("#description").val();
+                    var $tablerow = $('<tr></tr>');
+                    $('tbody ').append($tablerow);
+                    ($tablerow).append('<td class="one">'+first+'</td>');
+                    ($tablerow).append('<td class="two">'+last+ '</td>');
+                    ($tablerow).append('<td class="three">' +email+ '</thd>');
+                    ($tablerow).append('<td class="four">'+description+'</td>');
+                    $('form').trigger("reset");
+                    $('#info').click(function(){
+                	 	$('.three, .four').show();
+                });
+                    return false;
+            });
+            })
+
+        </script>
+
+        <style>
+            #left {
+                margin: 0 0 0 20px;
+                display: inline-block;
+                width: 200px;
+            }
+
+            table {
+                margin: 10px 0 0 0;
+                display: inline-block;
+                vertical-align: top;
+            }
+            #right {
+                margin: 10px 0 0 350px;
+                vertical-align: top;
+                display: inline-block;
+                width: 300px;
+            }
+            h2, button {
+                display: inline;
+                vertical-align: top;
+                padding-right: 20px;
+            }
+            .three, .four {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="left">
+            <h1>Contact Card</h1>
+
+            <form>
+                <label for="first">First Name:</label>
+				<input type ="text" name="first" id ="first" placeholder="First Name">
+				<label for="last">Last Name:</label>
+				<input type ="text" name="last" id ="last" placeholder="Last Name">
+                <label for="email" name="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email">
+				<label for="description">Description:</label>
+				<textarea id="description" placeholder="Description"></textarea>
+				<button class="submit">Add user</button>
+            </form>
+        </div>
+        <div id="right">
+             <h2>Users</h2>
+             <button id="info">Click here for more info</button>
+
+            <table>
+
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hover</title>
+        <style>
+            div {
+                height: 100px;
+                width: 100px;
+                background-color: black;
+                margin: 5px;
+                display: inline-block;
+            }
+        </style>
+        <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+        <script>
+        $(document).ready(function(){
+
+            $('div').hover(function() {
+                $(this).css({
+                    width: "150px",
+                    height: "150px"
+                });
+            }, function() {
+                $(this).css({
+                    width: "100px",
+                    height: "100px"
+                }, 'slow');
+
+            });
+
+        });
+        </script>
+    </head>
+
+    <body>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </body>
+</html>

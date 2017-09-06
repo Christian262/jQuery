@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery FUnctions</title>
+        <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+        <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("h6").toggle();
+            });
+            $("h1").last().addClass("selected");
+
+        });
+        </script>
+
+        <style>
+            .selected {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!--<button>Click to hide a paragraph!</button>-->
+        <p>Hi! Thank you for clicking a paragraph, about nothing!!!!!</p>
+        <!--<script>
+                    $( "button" ).click(function(){
+                        $("p").hide();
+                    });
+         </script> -->
+
+
+        <h1>This is a heading!</h1>
+        <h1>This is another heading!</h1>
+        <h1>This is getting to be cray!</h1>
+
+        <button>Toggle me!</button>
+        <h6>Little Voices</h6>
+        <h6 style="display:none">Can't he heard</h6>
+
+
+    </body>
+</html>

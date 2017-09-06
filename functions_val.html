@@ -1,0 +1,50 @@
+<!--Not: I did most of the functions (except some of the similar ones), and added this one for varification-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>val</title>
+        <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+        <script>
+            $(document).ready(function(){
+                $("input")
+                .keyup(function() {
+                    var value = $(this).val();
+                    $("p").text(value);
+                })
+                .keyup();
+            function displayVals(){
+                var singleValues = $("#single").val();
+                var multipleValues = $("multiple").val()||[];
+                $("p")/html("<b>Single:</b>" + singleValues + " <b>Multiple:</b>" + multipleValues.join( ", "));
+            }
+            $("select").change(displayVals);
+            displayVals();
+            });
+        </script>
+
+        <style>
+            p {
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" value="Your Digits">
+        <p></p>
+
+        <select id="single">
+            <option>Columbus</option>
+            <option>Not Columbus</option>
+        </select>
+
+        <select id="multiple" multiple="multiple">
+            <option selected="selected">Metro</option>
+            <option>Temperate</option>
+            <option>Buzzing Economically</option>
+            <option>Outdoor Rec</option>
+        </select>
+
+    </body>
+</html>

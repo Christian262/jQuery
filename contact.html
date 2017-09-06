@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Optional Contact Card</title>
+	<script type="text/javascript"></script>
+	<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$("form").submit(function(){
+    	var firstName = $('#first_name').val();
+    	var lastName = $('#last_name').val();
+    	var description = $('#description').val();
+    	var $tablerow = $('<tr></tr>');
+    	console.log(firstName);
+    	console.log(lastName);
+    	console.log(description);
+    	$('tbody ').append($tablerow);
+    	($tablerow).append('<td class="one">'+firstName+'</td>');
+    	($tablerow).append('<td class="two">'+lastName+ '</td>');
+    	($tablerow).append('<td class="three">'+description+'</td>');
+		$('button').click(function(){
+
+    	 	$('.three').show();
+        });
+
+    	 return false;
+  });
+});
+
+</script>
+
+</head>
+<body>
+	<h3> Theo's Contact Card </h3>
+
+	<button class="click">Click here for more information </button>
+
+	<table>
+		<tbody>
+
+		</tbody>
+
+
+</table>
+
+ <form action="">
+
+First Name: <input type="text" name="firstname" id="first_name"  />
+<br>
+
+Last Name: <input type="text" name="lastname" id="last_name"  />
+<br><br>
+Description: <input type="text/post" name="description" id="description" />
+<br>
+<input type="submit" value="Add User" id="add_user">
+
+</form>
+<style>
+		form {
+			position: absolute;
+			top: 50px;
+		}
+		h3 {
+			font-family: Verdana;
+			display: inline;
+		}
+	.three {
+		display: none;
+	}
+	#description {
+		width:220px;
+		min-height: 70px;
+
+	}
+
+	*{
+
+		background-color: gainsboro;
+		color: blue;
+	}
+	table {
+		margin-left: 710px;
+    margin-top: 5px;
+    font-size: 14px;
+	}
+	.click {
+		    position: absolute;
+    margin-left: 500px;
+	}
+</style>
+</body>
+</html>

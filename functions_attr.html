@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>attr page</title>
+        <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+        <script>
+            $(document).ready(function(){
+                var title = $("em").attr("title");
+                $("div").text(title);
+            })
+        </script>
+        <style>
+            em {
+                color: green;
+            }
+            div {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>The marathon is an amazing <em title="life-changing-event">goal</em> for mankind.</p>
+
+        <p>The title of the emphasis is:<div></div>     </p>
+
+
+    </body>
+</html>
